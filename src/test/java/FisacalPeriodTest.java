@@ -1,7 +1,7 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-public class FiscalGrdlstTest extends BaseTest {
+public class FisacalPeriodTest extends BaseTest {
 @Test
     public void grdLstLApiTest() {
         Response response =
@@ -22,4 +22,3 @@ public class FiscalGrdlstTest extends BaseTest {
         response.then().statusCode(200);
     }
 }
-

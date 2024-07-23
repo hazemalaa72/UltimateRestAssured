@@ -4,11 +4,13 @@ import org.testng.annotations.BeforeClass;
 import static io.restassured.path.json.JsonPath.with;
 public class BaseTest {
     protected String token;
+    protected  String baseurl;
     @BeforeClass
     public void getToken () {
+        baseurl="https://app.skeyerp.com";
         Response response=
                 RestAssured.given()
-                        .baseUri("https://app.skeyerp.com:30001")
+                        .baseUri(baseurl+":30001")
                         .body("{\n" +
                                 "  \"usrCode\": \"admin\",\n" +
                                 "  \"usrPswrd\": \"AubgrZeg\",\n" +
